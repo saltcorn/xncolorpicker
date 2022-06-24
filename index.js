@@ -4,6 +4,7 @@ const {
   text,
   script,
   domReady,
+  style,
   text_attr,
 } = require("@saltcorn/markup/tags");
 
@@ -34,7 +35,10 @@ const xnColorPicker = {
     const rndid = Math.floor(Math.random() * 16777215).toString(16);
     const opts = {};
     return (
-      div({ id: `colpick${text_attr(nm)}${rndid}`, class: "colorpick" }) +
+      div({
+        id: `colpick${text_attr(nm)}${rndid}`,
+        class: "colorpick",
+      }) +
       input({
         type: "hidden",
         name: text_attr(nm),
@@ -45,6 +49,7 @@ const xnColorPicker = {
             value: text_attr(v),
           }),
       }) +
+      style(`.fcolorpicker-curbox {border: 1px solid #777777;}`) +
       script(
         domReady(`var xncp = new XNColorPicker({
           selector: '#colpick${text(nm)}${rndid}',

@@ -1,6 +1,6 @@
 {
   "name": "@saltcorn/xncolorpicker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Color editor based on XN Color Picker",
   "main": "index.js",
   "dependencies": {
